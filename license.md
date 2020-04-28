@@ -1,0 +1,3 @@
+Outside of NYU (New York University) this content is shared under a Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license. For more details see https://creativecommons.org/licenses/by-nc/4.0/
+
+Within NYU (New York University), any usage of the material by instructors other than the authors is strictly prohibited, and any violators will be prosecuted to the fullest extent of law.
