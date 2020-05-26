@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Summary</th>
+        <th>Published</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in article_data %}
+      <tr>
+        {% if i['published'] <= hours  %}
+            <td style = "color: red">{{ i['title'] }}</td>
+            <td style = "color: red">{{ i['summary'] }}</td>
+            <td style = "color: red">{{ i['published'] }}</td>
+        {% endif %}
+        {% if i['published'] >= hours  %}
+            <td style = "color: blue">{{ i['title'] }}</td>
+            <td style = "color: blue">{{ i['summary'] }}</td>
+            <td style = "color: blue">{{ i['published'] }}</td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <img class="center-block" src="{{image}}" />
+</body>
+</html>

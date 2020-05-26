@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+
+{% if set_length < 5 %}
+
+<div style = "color: blue">
+<body>
+  <h1>{{ titles }}</h1>
+</body>
+</div>
+
+{% endif %}
+
+{% if set_length >= 5 %}
+
+<div style = "color: red">
+<body>
+  <h1>{{ titles }}</h1>
+</body>
+</div>
+
+{% endif %}
+
+</html>
