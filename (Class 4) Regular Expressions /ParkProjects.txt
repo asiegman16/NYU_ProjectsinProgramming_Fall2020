@@ -1,41 +1,5 @@
-﻿root
+root
 capitalproject
-TrackerID 9300
-FMSID 846 P-1ARAMEZ
-Title Citywide Services Shops Facility Mezzanine Floor Construction
-Summary This project will construct a mezzanine floor at the Citywide Services Shops Facility (Aramark Building).
-CurrentPhase design
-DesignPercentComplete 5
-ProcurementPercentComplete 0
-ConstructionPercentComplete 0
-DesignStart 09/2018
-DesignProjectedCompletion 
-DesignAdjustedCompletion 
-DesignActualCompletion 
-ProcurementStart 
-ProcurementProjectedCompletion 
-ProcurementAdjustedCompletion 
-ProcurementActualCompletion 
-ConstructionStart 
-ConstructionProjectedCompletion 
-ConstructionAdjustedCompletion 
-ConstructionActualCompletion 
-TotalFunding Less than $1 million
-ProjectLiaison Cristin Leoutsakos
-LastUpdated 10/01/2019
-Attachment 
-FundingSources
-FundingSource
-Mayoral
-Private
-Locations
-Location
-name 850 East 138th Street
-ParkID X360
-Latitude 40.802748
-Longitude -73.90932
-Boroughs
-Borough Bronx
 TrackerID 9578
 FMSID 
 Title A. Philip Randolph Square Reconstruction
