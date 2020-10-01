@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Web Scraping Solved</title>
+<title>2Web_Scraping_Solved</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13138,23 +13138,19 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
-<span class="o">!</span>pip install lxml
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">lxml</span> <span class="c1">#https://lxml.de/</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13163,24 +13159,20 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.nytimes.com/&quot;</span> <span class="c1"># let&#39;s scrape the NYT homepage</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.nytimes.com/&quot;</span> <span class="c1"># let&#39;s scrape the NYT homepage</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="c1"># the requests library is the easiest way to call to a URL; here we are using a GET command</span>
 
 <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span><span class="s1">&#39;html&#39;</span><span class="p">)</span> <span class="c1"># we are going to take the result of that GET command and pass it through bs4</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span> <span class="c1"># &#39;prettify&#39; does exactly what you&#39;d think – it prettifies the output of the print statement</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span> <span class="c1"># &#39;prettify&#39; does exactly what you&#39;d think – it prettifies the output of the print statement</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13198,18 +13190,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13219,18 +13207,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13239,19 +13223,15 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span> <span class="c1"># find the parent of the title </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span> <span class="c1"># find the parent of the title </span>
                        <span class="c1"># this is exceptionally helpful when you&#39;re trying to parse an HTML tree</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13261,31 +13241,23 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">p</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">p</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="c1"># get the class of that &lt;p&gt; tag</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="c1"># get the class of that &lt;p&gt; tag</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13294,32 +13266,24 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1"># find all &#39;a&#39; tags on the page</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1"># find all &#39;a&#39; tags on the page</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="c1"># find all &#39;a&#39; on the page</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span> <span class="c1"># get the associated href (hyperlink) for each instance </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">):</span> <span class="c1"># find all &#39;a&#39; on the page</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span> <span class="c1"># get the associated href (hyperlink) for each instance</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13342,45 +13306,33 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">p</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">p</span> 
 <span class="n">tag</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">attrs</span> <span class="c1"># you can easily access an attributes tags</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">attrs</span> <span class="c1"># you can easily access an attributes tags</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="c1"># or, you can search for a corresponding value as you would in a dictionary </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="c1"># or, you can search for a corresponding value as you would in a dictionary</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13390,18 +13342,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">string</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">string</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13411,18 +13359,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">name</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13440,18 +13384,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13460,24 +13400,20 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.nytimes.com/interactive/2019/10/31/us/california-fire-evacuees.html?action=click&amp;module=Top%20Stories&amp;pgtype=Homepage&quot;</span> <span class="c1"># let&#39;s scrape the NYT homepage</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.nytimes.com/interactive/2019/10/31/us/california-fire-evacuees.html?action=click&amp;module=Top%20Stories&amp;pgtype=Homepage&quot;</span> <span class="c1"># let&#39;s scrape the NYT homepage</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="c1"># the requests library is the easiest way to call to a URL; here we are using a GET command</span>
 
 <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span><span class="s1">&#39;html&#39;</span><span class="p">)</span> <span class="c1"># we are going to take the result of that GET command and pass it through bs4</span>
 
-<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span> 
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13487,18 +13423,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13507,19 +13439,15 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13537,31 +13465,23 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">head</span> <span class="c1"># let&#39;s just call out for the &#39;head&#39; tag</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">head</span> <span class="c1"># let&#39;s just call out for the &#39;head&#39; tag</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span> <span class="c1"># or the &#39;title&#39; tag</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span> <span class="c1"># or the &#39;title&#39; tag</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13571,48 +13491,36 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">p</span> <span class="c1"># get the first &lt;p&gt; tag beneath the &lt;body&gt; tag</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">p</span> <span class="c1"># get the first &lt;p&gt; tag beneath the &lt;body&gt; tag</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># note that using a tag name as an attribute gets you only the first tag by that name</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># note that using a tag name as an attribute gets you only the first tag by that name</span>
 
 <span class="n">soup</span><span class="o">.</span><span class="n">p</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to find all the tags, use something like find_all()</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># to find all the tags, use something like find_all()</span>
 
 <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13622,19 +13530,15 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">head</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">head_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">head</span>
 <span class="n">head_tag</span><span class="o">.</span><span class="n">contents</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13644,19 +13548,15 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">head_tag</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">head_tag</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13674,18 +13574,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13694,18 +13590,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">p</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">p</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13715,18 +13607,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13735,18 +13623,14 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13763,61 +13647,45 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1"># simply pass in the string for the tag you&#39;re searching for</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1"># simply pass in the string for the tag you&#39;re searching for</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1"># you can pass in regular expressions, too</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1"># you can pass in regular expressions, too</span>
 
 <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)):</span> <span class="c1"># find all tags whose names start with &#39;p&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)):</span> <span class="c1"># find all the tags whose names contain the letter &#39;t&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)):</span> <span class="c1"># find all the tags whose names contain the letter &#39;t&#39;</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">])</span> <span class="c1"># if you pass a list, bs4 will match against any item in that list </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">])</span> <span class="c1"># if you pass a list, bs4 will match against any item in that list</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13827,33 +13695,25 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;story-meta&quot;</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;story-meta&quot;</span><span class="p">)</span>
 
 <span class="c1"># note the class_, since class is a reserved word in Python</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;ad&quot;</span><span class="p">))</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;ad&quot;</span><span class="p">))</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13893,20 +13753,18 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">feedparser</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">feedparser</span>
+
+<span class="kn">import</span> <span class="nn">feedparser</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">time</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13917,35 +13775,27 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for example</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># for example</span>
 
 <span class="k">def</span> <span class="nf">printSentence</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span> <span class="o">+</span> <span class="s2">&quot; Plus a new sentence.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">sentence</span> <span class="o">+</span> <span class="s2">&quot; Plus a new sentence.&quot;</span><span class="p">)</span>
     <span class="k">return</span><span class="p">;</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">printSentence</span><span class="p">(</span><span class="s2">&quot;This is the sentence I want to print.&quot;</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">printSentence</span><span class="p">(</span><span class="s2">&quot;This is the sentence I want to print.&quot;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13955,20 +13805,16 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">TwoHeadlines</span><span class="p">():</span> <span class="c1"># we are leaving the input blank for now, and you&#39;ll see why in a moment</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">TwoHeadlines</span><span class="p">():</span> <span class="c1"># we are leaving the input blank for now, and you&#39;ll see why in a moment</span>
     <span class="k">pass</span>            <span class="c1"># this &#39;pass&#39; is here just to avoid an error as we work on our function. To see what happens without it, </span>
                     <span class="c1"># try removing the &#39;pass&#39; line and see the error you receive.</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13983,22 +13829,18 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nyt_rss_url</span> <span class="o">=</span> <span class="s1">&#39;https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml&#39;</span> <span class="c1"># find the desired rss feed</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">nyt_rss_url</span> <span class="o">=</span> <span class="s1">&#39;https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml&#39;</span> <span class="c1"># find the desired rss feed</span>
 <span class="n">espn_rss_url</span> <span class="o">=</span> <span class="s1">&#39;https://www.espn.com/espn/rss/news&#39;</span> <span class="c1"># find a second desired rss feed</span>
 
 <span class="n">nyt_feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">nyt_rss_url</span><span class="p">)</span> <span class="c1"># use feedparser to, well, parse the feed</span>
 <span class="n">espn_feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">espn_rss_url</span><span class="p">)</span> <span class="c1"># use feedparser to, well, parse the feed</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14008,32 +13850,24 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">nyt_feed</span><span class="p">)</span> <span class="c1"># print the full RSS feed</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">nyt_feed</span><span class="p">)</span> <span class="c1"># print the full RSS feed</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> <span class="c1"># for the first ten entries in the RSS feed (the ten most recent stories)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">])</span> <span class="c1"># print the title of said article</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> <span class="c1"># for the first ten entries in the RSS feed (the ten most recent stories)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">])</span> <span class="c1"># print the title of said article</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14044,36 +13878,28 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;favorite_food&#39;</span><span class="p">:</span><span class="s1">&#39;pasta&#39;</span><span class="p">}</span> <span class="c1"># create a new dictionary </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;favorite_food&#39;</span><span class="p">:</span><span class="s1">&#39;pasta&#39;</span><span class="p">}</span> <span class="c1"># create a new dictionary </span>
 
 <span class="c1"># consider &#39;favorite_food&#39; to be the word, and &#39;pasta&#39; to be the definition, it it helps you</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;favorite_food&#39;</span><span class="p">])</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;favorite_food&#39;</span><span class="p">])</span>
 
 <span class="c1"># we then call &#39;favorite_food&#39; and get the &quot;definiton&quot; </span>
 <span class="c1"># in reality, this is known as a Key:Value pair, with &quot;Key&quot; being the word, and &quot;Value&quot; being the definition</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14102,113 +13928,81 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># create a new, empty list called &#39;my_list&#39;</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># create a new, empty list called &#39;my_list&#39;</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
     <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">])</span> <span class="c1"># append the first ten titles to this list</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># select the third index of that list</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># select the third index of that list</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Article4</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">Article4</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Article4</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span> <span class="c1"># get the first 25 characters of the title of the 3rd index (fourth article) in our list</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">Article4</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span> <span class="c1"># get the first 25 characters of the title of the 3rd index (fourth article) in our list</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">Article4</span><span class="p">)</span> <span class="c1"># how many characters long is our title? </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">Article4</span><span class="p">)</span> <span class="c1"># how many characters long is our title?</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">Article4</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># figure out the half-way point of the title </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">Article4</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># figure out the half-way point of the title</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Article4</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span> <span class="c1"># get the first half of our article title</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">Article4</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span> <span class="c1"># get the first half of our article title</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Article5</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># let&#39;s see what the next title is in our list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Article5</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">Article5</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># let&#39;s see what the next title is in our list</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Article5</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14218,56 +14012,44 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nyt_first_story</span> <span class="o">=</span> <span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1">#Recall that &#39;0&#39; is actually the first instance</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nyt_first_story</span><span class="p">)</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">nyt_first_story</span> <span class="o">=</span> <span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1">#Recall that &#39;0&#39; is actually the first instance</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nyt_first_story</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">nyt_first_story</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># remember, I can split that single sentence into a list of individual words </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">nyt_first_story</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># remember, I can split that single sentence into a list of individual words </span>
+<span class="k">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
 
     <span class="n">nyt_first_story</span> <span class="o">=</span> <span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1"># pull the title of the ith story in the first RSS feed</span>
     <span class="n">espn_first_story</span> <span class="o">=</span> <span class="n">espn_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1"># pull the title of the ith story in the second RSS feed</span>
 
     <span class="n">nyt_words</span> <span class="o">=</span> <span class="n">nyt_first_story</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># split the title by spaces (aka, make every word in the title it&#39;s own)</span>
     <span class="n">espn_words</span> <span class="o">=</span> <span class="n">espn_first_story</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># split the title by spaces (aka, make every word in the title it&#39;s own)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; --- &quot;</span><span class="p">)</span> <span class="c1"># print a line for formatting purposes</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">espn_words</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot; --- &quot;</span><span class="p">)</span> <span class="c1"># print a line for formatting purposes</span>
+<span class="k">print</span><span class="p">(</span><span class="n">espn_words</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14277,12 +14059,10 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
 
     <span class="n">nyt_first_story</span> <span class="o">=</span> <span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1"># pull the title of the ith story in the first RSS feed</span>
     <span class="n">espn_first_story</span> <span class="o">=</span> <span class="n">espn_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1"># pull the title of the ith story in the second RSS feed</span>
@@ -14292,16 +14072,14 @@ div#notebook {
 
     <span class="n">nyt_words</span> <span class="o">=</span> <span class="n">nyt_words</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span> 
     <span class="n">espn_words</span> <span class="o">=</span> <span class="n">espn_words</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">espn_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; --- &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">espn_words</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot; --- &quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">espn_words</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14311,22 +14089,18 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># the &#39;:&#39; at the front of a list means &#39;everything leading up to this point. For instance: </span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c1"># the &#39;:&#39; at the front of a list means &#39;everything leading up to this point. For instance: </span>
 
 <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14344,31 +14118,23 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># the result is a float, which we don&#39;t want</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># the result is a float, which we don&#39;t want</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># tis gives us an integer</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># tis gives us an integer</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14378,19 +14144,15 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14417,12 +14179,10 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span> 
 
     <span class="n">nyt_first_story</span> <span class="o">=</span> <span class="n">nyt_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1"># pull the title of the ith story in the first RSS feed</span>
     <span class="n">espn_first_story</span> <span class="o">=</span> <span class="n">espn_feed</span><span class="p">[</span><span class="s1">&#39;entries&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="c1"># pull the title of the ith story in the second RSS feed</span>
@@ -14432,17 +14192,15 @@ div#notebook {
 
     <span class="n">nyt_words</span> <span class="o">=</span> <span class="n">nyt_words</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nyt_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span> 
     <span class="n">espn_words</span> <span class="o">=</span> <span class="n">espn_words</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">espn_words</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span>
-    
+
     <span class="n">new_headline</span> <span class="o">=</span> <span class="n">nyt_words</span> <span class="o">+</span> <span class="n">espn_words</span> <span class="c1"># Take the first half of the title from the first RSS feed and add the second half of the second RSS feed</span>
     <span class="n">new_headline</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">new_headline</span><span class="p">)</span> <span class="c1"># Join the two strings created above with spaces</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">new_headline</span><span class="p">)</span> <span class="c1"># Print your newly created headline</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">new_headline</span><span class="p">)</span> <span class="c1"># Print your newly created headline</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
-
 </div>
     </div>
   </div>
